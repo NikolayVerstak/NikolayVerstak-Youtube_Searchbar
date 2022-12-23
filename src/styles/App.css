@@ -1,0 +1,31 @@
+/* General styles */
+body {
+    min-height: 100%;
+    background: url("../pics/background.jpg");
+    background-size: cover;
+}
+.ui.container {
+    padding-top: 20px;
+}
+.main h1.header {
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 900;
+}
+
+/* No to display videoList container until data is fetched */
+.displayNone {
+    display: none;
+}
+
+/* Settings for transparent background */
+.ui.segment {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+.loading:before,
+.ui.loading.segment:before {
+    background: none;
+}
+.loading::after {
+    display: none;
+}

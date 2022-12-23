@@ -1,0 +1,22 @@
+.video-item {
+    cursor: pointer;
+    width: 150px;
+}
+
+/* To change width of pictures for each video in a list ac. to screen width */
+@media screen and (min-width: 550px) {
+    .video-item {
+        width: 230px;
+    }
+}
+
+.video-item.item img {
+    border-radius: 8px;
+}
+
+.video-item .header {
+    word-wrap: break-word;
+    overflow-y: hidden;
+    max-height: 150px;
+    margin-top: 8px;
+}

@@ -1,0 +1,21 @@
+/* Loading screen styling  */
+.loading {
+    height: 630px;
+}
+.loading .dimmer {
+    background: none;
+}
+.ui.large.text.loader {
+    font-size: 20px;
+}
+
+/* Styling of a large screen with selected video*/
+.embed {
+    border-radius: 8px;
+}
+.ui.segment.details {
+    margin-bottom: 16px;
+}
+h4.ui.header {
+    color: white;
+}

@@ -22,13 +22,13 @@ const App = () => {
             {/* onFormSubmit is a prop that we pass to SearchBar */}
             <SearchBar onFormSubmit={search} />
             <div className="ui equal width grid">
-                <div className="column">
-                    <div className="row">
+                <div className="column" id="content">
+                    <div className="row" id="screen">
                         {/* we pass down a single object 'video' as a prop to VideoDetails */}
                         <VideoDetails video={selectedVideo} />
                     </div>
-                    <div className={!selectedVideo ? "displayNone" : "row"}>
-                        <div className="ui segment" style={{ height: "260px" }}>
+                    <div className={!selectedVideo ? "displayNone" : "row "} id="videoList">
+                        <div className="ui segment">
                             {/* we pass a prop that equals State 'videos' and callback function 'onVideoSelect' */}
                             <VideoList
                                 onVideoSelect={setSelectedVideo} //callback that works when an user clicks on some video

@@ -4,12 +4,18 @@ body {
     background: url("../pics/background.jpg");
     background-size: cover;
 }
+
 .ui.container {
     padding-top: 20px;
 }
+
 .main h1.header {
     color: rgba(0, 0, 0, 0.7);
     font-weight: 900;
+}
+
+#videoList {
+    height: 260px;
 }
 
 /* No to display videoList container until data is fetched */
@@ -22,10 +28,45 @@ body {
     background: rgba(0, 0, 0, 0.5);
     color: white;
 }
+
+/* Loading spinner */
 .loading:before,
 .ui.loading.segment:before {
     background: none;
 }
+
 .loading::after {
     display: none;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .ui.container {
+        width: 723px;
+    }
+}
+
+/* For big screens list of videos move from bottom to right side */
+@media only screen and (min-width: 1200px) {
+    .ui.container {
+        width: 1127px;
+        padding: 0;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #content {
+        display: grid;
+        grid-template-columns: 76% 23%;
+        justify-content: space-between;
+    }
+
+    .ui.grid.video-list {
+        flex-wrap: wrap;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        justify-content: center;
+        max-height: 576px;
+    }
 }
